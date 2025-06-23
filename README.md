@@ -1,6 +1,6 @@
 # Golden Raspberry Awards API
 
-API REST para gerenciar os prêmios do Golden Raspberry Awards (Razzies).
+API REST para gerenciar os prêmios do Golden Raspberry Awards
 
 ## Pré-requisitos
 

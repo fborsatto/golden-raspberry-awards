@@ -1,4 +1,3 @@
-// src/main/java/com/example/razzie/repository/MovieRepository.java
 package com.outsera.golden_raspberry_awards.repository;
 
 import com.outsera.golden_raspberry_awards.model.Movie;

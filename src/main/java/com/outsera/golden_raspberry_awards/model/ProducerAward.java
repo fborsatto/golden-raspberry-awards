@@ -1,4 +1,3 @@
-// src/main/java/com/example/razzie/model/ProducerAward.java
 package com.outsera.golden_raspberry_awards.model;
 
 import jakarta.persistence.Entity;
