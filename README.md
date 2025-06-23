@@ -19,7 +19,7 @@ API REST para gerenciar os prêmios do Golden Raspberry Awards (Razzies).
 ## Configuração e Execução
 
 ### Clonando o Repositório
-
+git clone https://github.com/fborsatto/golden-raspberry-awards.git
 
 ### Compilando o Projeto
 mvn clean install
