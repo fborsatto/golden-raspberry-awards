@@ -62,13 +62,14 @@ public class ProducerAwardService {
             int previousInterval = awards.getFirst();
             for (int i = 1; i < awards.size(); i++) {
                 int interval = awards.get(i) - previousInterval;
+                previousInterval = awards.get(i);
                 if (maxIntervalList.isEmpty() || interval >= maxIntervalList.getFirst().getInterval()) {
                     if (!maxIntervalList.isEmpty() && interval > maxIntervalList.getFirst().getInterval()) {
                         maxIntervalList.clear();
                     }
                     maxIntervalList.add(AwardIntervalsResponse.ProducerInterval.builder()
                             .followingWin(awards.get(i))
-                            .previousWin(previousInterval)
+                            .previousWin(awards.get(i-1))
                             .producer(producer)
                             .interval(interval)
                             .build());
@@ -87,13 +88,14 @@ public class ProducerAwardService {
             int previousInterval = awards.getFirst();
             for (int i = 1; i < awards.size(); i++) {
                 int interval = awards.get(i) - previousInterval;
+                previousInterval = awards.get(i);
                 if (minIntervalList.isEmpty() || interval <= minIntervalList.getFirst().getInterval()) {
                     if (!minIntervalList.isEmpty() && interval < minIntervalList.getFirst().getInterval()) {
                         minIntervalList.clear();
                     }
                     minIntervalList.add(AwardIntervalsResponse.ProducerInterval.builder()
                             .followingWin(awards.get(i))
-                            .previousWin(previousInterval)
+                            .previousWin(awards.get(i-1))
                             .producer(producer)
                             .interval(interval)
                             .build());
